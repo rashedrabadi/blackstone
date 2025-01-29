@@ -3,7 +3,6 @@ body {
   width: 100vw;
   margin: 0;
   padding: 0;
-  background-color: #d9d9d980;
   font-family: "Inter Tight", serif;
   overflow-x: hidden;
   -webkit-user-select: none;
@@ -536,13 +535,16 @@ h1 {
   line-height: 50.4px;
   letter-spacing: -0.02em;
   text-align: center;
-  margin-bottom: 166px;
-  margin-top: 36px;
+  padding-bottom: 166px;
+  padding-top: 36px;
+  margin: 0;
+  background: linear-gradient(0deg, rgba(217, 217, 217, 0.5) 0%, rgba(217, 217, 217, 0) 100%);
+
 }
 @media screen and (max-width: 639.9px) {
   .success-stories-header {
     font-size: 36px;
-    margin-bottom: 150px;
+    padding-bottom: 150px;
   }
 }
 .success-stories-bg {
@@ -617,9 +619,9 @@ section {
 }
 @media screen and (max-width: 639.9px) {
   .SP-slider {
-    max-width: 300px;
+    max-width: 283px;
     border-radius: 10px !important;
-    padding: 5px !important;
+    padding: 16px !important;
   }
 }
 .SP-slider > img {
@@ -695,13 +697,7 @@ section {
   width: 100%;
 }
 
-/* Media query for tablets and desktops */
-@media screen and (min-width: 768px) {
-  .order-landing__data {
-    width: 50%; /* Display two cards per row */
-    float: left;
-  }
-}
+
 
 .SP-slider .slide {
   flex: 1;
@@ -776,8 +772,8 @@ section {
 }
 @media screen and (max-width: 639.9px) {
   .reviwer-image {
-    height: 138px;
-    width: 300px;
+    height: 137px;
+    width: 294px;
     border-radius: 15px !important;
   }
 }
