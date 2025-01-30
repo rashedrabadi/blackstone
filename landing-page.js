@@ -99,6 +99,7 @@ class Dialog {
 
   set visible(value) {
     Dialog.dialog.classList.toggle("open", value);
+    Dialog.dialog.parentElement.classList.toggle("visible", value);
   }
 
   show(message) {
@@ -119,6 +120,9 @@ class Dialog {
   }
 
   #createHTMLDialogBox() {
+    const overlay = document.createElement("div");
+    overlay.classList.add("dialog-overlay");
+
     const dialog = document.createElement("div");
     dialog.setAttribute("role", "dialog");
     dialog.setAttribute("aria-labelledby", "jsdialog-title");
@@ -126,15 +130,20 @@ class Dialog {
     dialog.classList.add("dialog");
     dialog.id = "jsdialog";
     dialog.innerHTML = `
-      <div class="dialog-content-wrapper">
-          <button type="button" class="dialog-close" aria-label="Close">×</button>
+        <div class="dialog-content-wrapper">
+            <button type="button" class="dialog-close" aria-label="Close">×</button>
             <div class="inner-container">
-          <div class="dialog-header"></div>
-          <div class="dialog-body" id="jsdialog-body"></div> 
-          </div>
-      </div>`;
-    return document.body.appendChild(dialog);
-  }
+                <div class="dialog-header"></div>
+                <div class="dialog-body" id="jsdialog-body"></div> 
+            </div>
+        </div>`;
+
+    overlay.appendChild(dialog);
+    document.body.appendChild(overlay);
+
+    return dialog;  // Return the dialog reference instead of overlay
+}
+
 }
 
 // Create a single instance of the dialog
