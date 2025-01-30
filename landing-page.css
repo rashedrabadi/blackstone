@@ -35,7 +35,6 @@ body {
 }
 @media screen and (max-width: 1145.9px) {
   .banner-img {
-
     height: 400px;
   }
 }
@@ -51,7 +50,6 @@ body {
 }
 @media screen and (max-width: 639.9px) {
   .banner-leap-word {
-
     height: 34px;
     width: 210px;
   }
@@ -64,7 +62,7 @@ body {
   text-align: left;
   text-underline-position: from-font;
   text-decoration-skip-ink: none;
-  color: #E1B7C9;
+  color: #e1b7c9;
   margin-top: 0;
   margin-bottom: 20px;
   max-width: 808px;
@@ -538,8 +536,11 @@ h1 {
   padding-bottom: 166px;
   padding-top: 36px;
   margin: 0;
-  background: linear-gradient(0deg, rgba(217, 217, 217, 0.5) 0%, rgba(217, 217, 217, 0) 100%);
-
+  background: linear-gradient(
+    0deg,
+    rgba(217, 217, 217, 0.5) 0%,
+    rgba(217, 217, 217, 0) 100%
+  );
 }
 @media screen and (max-width: 639.9px) {
   .success-stories-header {
@@ -697,8 +698,6 @@ section {
   width: 100%;
 }
 
-
-
 .SP-slider .slide {
   flex: 1;
   text-align: center;
@@ -739,6 +738,11 @@ section {
   text-underline-position: from-font;
   text-decoration-skip-ink: none;
   margin: 0;
+}
+@media screen and (max-width: 639.9px) {
+  .success-stories-card-name {
+    max-width: 160px;
+  }
 }
 .success-stories-card-nav {
   font-size: 18px;
@@ -788,7 +792,7 @@ section {
   text-align: left;
 
   margin: 0;
-  max-width: 462px;
+  max-width: 510px;
 }
 @media screen and (max-width: 1124.9px) {
   .success-stories-card-body-content {
@@ -1139,5 +1143,211 @@ section {
 @media screen and (max-width: 639.9px) {
   .footer-all-rights {
     margin: 0;
+  }
+}
+
+.dialog {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  translate: -50% -50%; /* center */
+  width: 100%;
+  max-width: 964px;
+  background-color: white;
+  border-radius: 20px;
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2);
+  pointer-events: none;
+  opacity: 0;
+  scale: 0;
+  transition: scale 0.3s ease-in-out, opacity 0.15s linear;
+  z-index: 99;
+  font-family: "Inter Tight", serif;
+  padding: 54px 91px;
+  padding-top: 54px;
+  padding-bottom: 54px;
+  padding-left: 91px;
+  padding-right: 0;
+}
+@media screen and (max-width: 1124.9px) {
+  .dialog {
+    padding-left: 20px;
+    width: 86%;
+    padding-top: 0;
+    padding-bottom: 0;
+  }
+}
+@media screen and (max-width: 639.9px) {
+  .dialog {
+    padding-left: 20px;
+    padding-top: 0;
+    padding-bottom: 0;
+    width: 86%;
+  }
+}
+.inner-container {
+  padding-right: 91px;
+  max-height: 70vh;
+  overflow-y: auto;
+}
+@media screen and (max-width: 1124.9px) {
+  .inner-container {
+    padding-right: 20px;
+  }
+}
+
+.dialog.open {
+  pointer-events: auto;
+  opacity: 1;
+  scale: 1;
+}
+
+.dialog-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 29.25px;
+}
+
+.dialog-title {
+  font-family: Inter Tight;
+  font-size: 64px;
+  font-weight: 600;
+  line-height: 76.8px;
+  letter-spacing: -0.02em;
+  text-align: left;
+  text-underline-position: from-font;
+  text-decoration-skip-ink: none;
+  color: #000;
+  margin: 0;
+}
+@media screen and (max-width: 1124.9px) {
+  .dialog-title {
+    font-size: 42px;
+    line-height: 46.8px;
+    max-width: 370px;
+  }
+}
+@media screen and (max-width: 639.9px) {
+  .dialog-title {
+    font-size: 32px;
+    line-height: 39.8px;
+  }
+}
+.dialog-close {
+  background-color: white;
+  font-size: 20px;
+  padding: 10px;
+  line-height: 10px;
+
+  transition: background-color 0.2s linear;
+  position: absolute;
+  right: 0%;
+  top: -44px;
+  border-radius: 50%;
+}
+
+.dialog-close:is(:focus, :hover) {
+  background-color: #d4e7fa;
+}
+
+.dialog-footer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.dialog-button {
+  background-color: dodgerblue;
+  color: white;
+  padding: 0.4em 1.4em;
+  transition: background-color 0.2s linear;
+}
+
+.dialog-button:is(:focus, :hover) {
+  background-color: #166cbf;
+}
+
+.dialog-close,
+.dialog-button {
+  border: none;
+  cursor: pointer;
+}
+
+.the-client {
+  font-family: Inter Tight;
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 28.8px;
+  text-align: left;
+  text-underline-position: from-font;
+  text-decoration-skip-ink: none;
+  color: #7880f2;
+  margin-top: 0;
+  margin-bottom: 8px;
+}
+.the-client-word {
+  font-family: Inter Tight;
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 28.8px;
+  text-align: left;
+  text-underline-position: from-font;
+  text-decoration-skip-ink: none;
+  color: #000;
+  margin-top: 0;
+  margin-bottom: 34px;
+}
+.dialog-img {
+  width: 100%;
+  border-radius: 20px;
+  margin-top: 0;
+  margin-bottom: 45px;
+}
+.line {
+  width: 100%;
+  height: 2px;
+  border-top: 1px solid #b2b2b299;
+  margin-top: 0;
+  margin-bottom: 51.75px;
+}
+.dialog-content {
+  margin-top: 0;
+  margin-bottom: 88px;
+}
+.heading-content {
+  font-family: Inter Tight;
+  font-size: 42px;
+  font-weight: 600;
+  line-height: 50.4px;
+  letter-spacing: -0.02em;
+  text-align: left;
+  text-underline-position: from-font;
+  text-decoration-skip-ink: none;
+  color: #05010c;
+  margin-top: 0;
+  margin-bottom: 36px;
+}
+@media screen and (max-width: 639.9px) {
+  .heading-content {
+    font-size: 32px;
+    line-height: 39.8px;
+  }
+}
+.pargraph-content {
+  font-family: Poppins;
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 28.8px;
+  text-align: left;
+  text-underline-position: from-font;
+  text-decoration-skip-ink: none;
+  color: #000;
+  margin: 0 99px;
+  padding: 0 20px;
+  border-left: 1px solid #b2b2b299;
+}
+@media screen and (max-width: 1124.9px) {
+  .pargraph-content {
+    margin: 0 14px;
   }
 }
