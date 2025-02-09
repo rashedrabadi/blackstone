@@ -625,12 +625,12 @@ h1 {
   color: #434ee5;
   width: 100%;
   text-decoration: none;
-  background: url("/blackstone/assets/icons/arrow-right.svg") no-repeat right center;
+  background: url("/assets/icons/arrow-right.svg") no-repeat right center;
   background-size: 24px 24px;
 }
 .white {
   color: #fff;
-  background: url("/blackstone/assets/icons/arrow-right-w.svg") no-repeat right center !important;
+  background: url("/assets/icons/arrow-right-w.svg") no-repeat right center !important;
 }
 .success-stories {
   width: 100vw;
