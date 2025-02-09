@@ -7,6 +7,113 @@ body {
   overflow-x: hidden;
   -webkit-user-select: none;
 }
+/* Global Styles */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+}
+/* Header */
+.header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 87.6%;
+  background: transparent;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 3.5rem;
+  padding-left: 5.5rem;
+  padding-right: 5.5rem;
+  z-index: 1000;
+
+}
+
+/* Logo */
+.header .logo img {
+  width: 220px;
+  height: 35px;
+}
+
+/* Navigation */
+.navbar {
+  display: flex;
+  align-items: center;
+}
+
+.navbar a {
+  color: white;
+  text-decoration: none;
+  margin: 0 15px;
+  font-size: 16px;
+  font-family: "Lato", serif;
+  transition: color 0.3s ease;
+}
+
+.navbar a:hover {
+  color: #434ee5;
+}
+
+/* Dropdown */
+.dropdown {
+  position: relative;
+}
+
+.dropdown .dropdown-menu {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background: linear-gradient(180deg, #192126 0%, rgb(12, 13, 16) 100%);
+  color: white;
+  display: none;
+  min-width: 220px;
+  border-radius: 5px;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.3);
+  overflow: hidden;
+}
+
+.dropdown:hover .dropdown-menu {
+  display: block;
+}
+
+.dropdown-menu a {
+  display: block;
+  padding: 12px 15px;
+  color: white;
+  text-decoration: none;
+  transition: background 0.3s ease, padding-left 0.3s ease;
+}
+
+.dropdown-menu a:hover {
+  background: rgba(255, 255, 255, 0.1);
+  padding-left: 20px;
+}
+
+/* Contact Button */
+.contact-btn {
+  background: linear-gradient(90deg, #319fd9 -74.77%, rgba(255, 255, 255, 0) 80%), linear-gradient(0deg, #ffffff, #ffffff);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  border-radius: 5px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background 0.3s ease;
+  --tw-text-opacity: 1;
+  color: rgb(255 255 255 / var(--tw-text-opacity)) !important;
+  --tw-border-opacity: 1;
+  border: 1px solid  rgb(49 159 217 / var(--tw-border-opacity));
+  border-radius: 50px;
+
+
+  padding: .75rem  1.25rem;
+}
+
+
+.contact-btn:hover {
+  background: #005bb5;
+}
+
 .banner-container {
   padding: 208.5px 140px;
   height: 246px;
