@@ -1,6 +1,37 @@
-$(document).ready(function () {
-  console.log("jQuery is working!");
+// Toggle the navigation menu on mobile
+const navbarToggle = document.getElementById('navbar-toggle');
+const navbar = document.querySelector('.navbar');
+const blurBackground = document.createElement('div');
+blurBackground.classList.add('blur-background');
+document.body.appendChild(blurBackground);
+
+navbarToggle.addEventListener('click', () => {
+  navbar.classList.toggle('show-navbar');
+  blurBackground.classList.toggle('show-blur-background');
 });
+
+// Toggle the dropdown menus
+const solutionsToggle = document.getElementById('solutions-toggle');
+const solutionsMenu = document.getElementById('solutions-menu');
+const productsToggle = document.getElementById('products-toggle');
+const productsMenu = document.getElementById('products-menu');
+
+solutionsToggle.addEventListener('click', () => {
+  solutionsMenu.classList.toggle('show-dropdown');
+});
+
+productsToggle.addEventListener('click', () => {
+  productsMenu.classList.toggle('show-dropdown');
+});
+
+// Close dropdowns when clicking outside
+document.addEventListener('click', (event) => {
+  if (!event.target.closest('.dropdown') && !event.target.closest('.navbar-toggle')) {
+    solutionsMenu.classList.remove('show-dropdown');
+    productsMenu.classList.remove('show-dropdown');
+  }
+});
+
 const slides = $(".SP-slider");
 const dotsContainer = $(".carousel-dots");
 const interval = 5000;
@@ -54,9 +85,9 @@ function updateTimer() {
   now = new Date();
   diff = future - now;
 
-  days = Math.floor(diff / (1000 * 60 * 60 * 24));
-  hours = Math.floor(diff / (1000 * 60 * 60));
-  mins = Math.floor(diff / (1000 * 60));
+  days = 0;
+  hours = 0;
+  mins = 0;
 
   d = days;
   h = hours - days * 24;
@@ -64,19 +95,19 @@ function updateTimer() {
 
   document.getElementById("timer").innerHTML =
     `<div class='time-block'>` +
-    d +
+    d + d+
     `<span>Days</span></div>` +
     `<div class='time-splitter'>:</div>` +
     `<div class='time-block'>` +
-    h +
+    h + h+
     `<span>Hours</span></div>` +
     `<div class='time-splitter'>:</div>` +
     `<div class='time-block'>` +
-    m +
+    m + m +
     `<span>Minutes</span></div>`;
 }
 updateTimer();
-setInterval("updateTimer()", 60000);
+//setInterval("updateTimer()", 60000);
 
 class Dialog {
   static dialog = null;
